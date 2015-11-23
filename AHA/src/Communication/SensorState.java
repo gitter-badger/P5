@@ -13,6 +13,13 @@ public class SensorState {
     private List<SensorValue> values = new ArrayList<>();
     private Date time;
 
+    public SensorState(Date time1,SensorValue ... values1){
+        for (int i = 0; i < values1.length; i++) {
+            values.add(values1[i]);
+        }
+        time = time1;
+    }
+
     /**
      * @return The time the last sensor value was recorded
      */
@@ -25,5 +32,14 @@ public class SensorState {
      */
     public List<SensorValue> getValues() {
         return values;
+    }
+
+    @Override
+    public String toString() {
+        String string = "";
+        for ( int i = 0 ; i <= values.size() ; i++ ) {
+            string = string +", " + values.toString();
+        }
+        return string + time.toString();
     }
 }

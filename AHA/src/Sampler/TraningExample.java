@@ -6,11 +6,11 @@ import Communication.SensorState;
  * Created by heider on 19/11/15.
  */
 public class TraningExample {
-    private StateHistory pat;
+    private StateScope input;
     private SensorState target; //Find a target representation maybe an Action instead of a state
 
-    public TraningExample(StateHistory pat, SensorState target) {
-        this.pat = pat;
+    public TraningExample(StateScope input, SensorState target) {
+        this.input = input;
         this.target = target;
     }
 
@@ -18,8 +18,8 @@ public class TraningExample {
     /**
      * @return The pattern scope of the traning example
      */
-    public StateHistory getPatternScope() {
-        return pat;
+    public StateScope getStateScope() {
+        return input;
     }
 
     /**

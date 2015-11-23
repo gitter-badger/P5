@@ -12,4 +12,9 @@ public class SensorValue {
         this.value = value;
         this.isEmulatable = isEmulatable;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(value);
+    }
 }
